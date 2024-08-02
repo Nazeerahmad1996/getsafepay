@@ -1,0 +1,80 @@
+
+.App {
+    margin: 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ebf6ff;
+  padding: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-logo img {
+  width: 200px;
+  /* height: 200px; */
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.navbar-logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.title {
+    color: #193A8C;
+    font-size: 0.8rem;
+    letter-spacing: 20px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 15px; /* Space between links */
+}
+
+.navbar-link {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #193A8C;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 900;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px; /* Thickness of the border */
+  background-color: #193A8C; /* Color of the border */
+  transform: scaleX(0); /* Initially hide the border */
+  transition: transform 0.3s; /* Smooth transition */
+}
+
+.navbar-link:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
+  transform: translateY(-2px);
+}
+
+.navbar-link:hover::after {
+  transform: scaleX(1); /* Show the border on hover */
+}
+
+.navbar-link:active {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(0);
+}
+
